@@ -1,4 +1,4 @@
-module xiezhi
+module github.com/cb252389238/xiezhi
 
 go 1.20
 

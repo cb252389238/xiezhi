@@ -4,7 +4,7 @@
 
 ## 安装方法
 ```go
-go get https://github.com/cb252389238/xiezhi
+go get github.com/cb252389238/xiezhi
 ```
 
 ## 使用方法

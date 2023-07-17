@@ -1,13 +1,13 @@
 package xiezhi
 
 import (
+	"github.com/cb252389238/xiezhi/cosinesim"
+	"github.com/cb252389238/xiezhi/gojieba"
+	"github.com/cb252389238/xiezhi/jaccard"
+	"github.com/cb252389238/xiezhi/minhash"
+	"github.com/cb252389238/xiezhi/simhash"
+	"github.com/cb252389238/xiezhi/util/charchar"
 	"sync"
-	"xiezhi/cosinesim"
-	"xiezhi/gojieba"
-	"xiezhi/jaccard"
-	"xiezhi/minhash"
-	"xiezhi/simhash"
-	"xiezhi/util/charchar"
 )
 
 var (
