@@ -24,4 +24,5 @@ simhash算法
 xiezhi.SimHash(text) //返回hash值 uint64
 xiezhi.SimHashSimilarity(hash1,hash2) // 返回海明距离和相似度  一般海明距离小于等于3则认为是相似文档
 
+
 ```
