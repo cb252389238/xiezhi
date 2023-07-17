@@ -2,6 +2,7 @@ package xiezhi
 
 import (
 	"sync"
+	"xiezhi/cosinesim"
 	"xiezhi/gojieba"
 	"xiezhi/jaccard"
 	"xiezhi/minhash"
@@ -50,7 +51,16 @@ func MinHashSimilarity(hash1, hash2 []uint32) float64 {
 	return minhash.ComputeSimilarity(hash1, hash2)
 }
 
+// 杰卡德系数计算
 func Jaccard(text1, text2 string) float64 {
 	coefficient := jaccard.ComputeJaccardCoefficient(cut(text1), cut(text2))
 	return coefficient
+}
+
+// 余弦相似度计算
+func CosineSim(text1, text2 string) float64 {
+	frequency1 := cosinesim.CalculateTermFrequency(cut(text1))
+	frequency2 := cosinesim.CalculateTermFrequency(cut(text2))
+	similarity := cosinesim.ComputeCosineSimilarity(frequency1, frequency2)
+	return similarity
 }

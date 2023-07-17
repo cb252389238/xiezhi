@@ -269,3 +269,14 @@ func BenchmarkJaccard(b *testing.B) {
 		Jaccard(text1, text2)
 	}
 }
+
+func TestCosineSim(t *testing.T) {
+	sim := CosineSim(text1, text2)
+	fmt.Println(sim)
+}
+
+func BenchmarkCosineSim(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		CosineSim(text1, text2)
+	}
+}
