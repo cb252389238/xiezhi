@@ -3,6 +3,7 @@ package xiezhi
 import (
 	"sync"
 	"xiezhi/gojieba"
+	"xiezhi/jaccard"
 	"xiezhi/minhash"
 	"xiezhi/simhash"
 	"xiezhi/util/charchar"
@@ -47,4 +48,9 @@ func MinHash(text string) []uint32 {
 
 func MinHashSimilarity(hash1, hash2 []uint32) float64 {
 	return minhash.ComputeSimilarity(hash1, hash2)
+}
+
+func Jaccard(text1, text2 string) float64 {
+	coefficient := jaccard.ComputeJaccardCoefficient(cut(text1), cut(text2))
+	return coefficient
 }
